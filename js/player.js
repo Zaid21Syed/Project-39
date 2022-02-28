@@ -39,16 +39,16 @@ class Player {
 
    //write a function for getPlayerAtEnd()
    getPlayerAtEnd(){
-       database.ref("playersAtEnd").on("value", data =>{
+       database.ref("playerAtEnd").on("value", data =>{
            this.rank = data.val();
        })
    }
        
 
    //write a function for  static updatePlayerAtEnd(rank)
-   static updatePlayersAtEnd(rank){
+   static updatePlayerAtEnd(rank){
        database.ref("/").update({
-           playersAtEnd: rank
+           playerAtEnd: rank
        })
    }
         
